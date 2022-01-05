@@ -15,15 +15,13 @@ db.authenticate().then(() => {
 
 
 // console.log('somthing..')
-// db.query('SELECT * FROM users')
-async function omma() {
+async function test() {
     const users = await db.query("SELECT * FROM `users`", {
         type: QueryTypes.SELECT
     });
     console.log(users);
 }
-
-omma()
+test()
 
 module.exports = {
     db
