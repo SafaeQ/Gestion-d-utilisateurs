@@ -10,3 +10,9 @@ sequelize.authenticate().then(() => {
 }).catch((error) => {
     console.error('cannot to connect to the database:', error)
 })
+
+console.log('somthing..')
+
+module.exports = {
+    sequelize
+}
