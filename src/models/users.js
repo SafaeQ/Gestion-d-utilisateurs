@@ -3,7 +3,7 @@ const {
     DataTypes
 } = require('sequelize');
 
-function Sqlz(Sequelize, DataTypes) {
+function Sqlz(sequelize, DataTypes) {
     const User = sequelize.define('User', {
         text: {
             type: DataTypes.String,
