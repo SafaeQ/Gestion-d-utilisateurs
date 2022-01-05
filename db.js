@@ -21,7 +21,7 @@ async function test() {
     });
     console.log(users);
 }
-test()
+// test()
 
 module.exports = {
     db
