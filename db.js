@@ -10,7 +10,7 @@ db.authenticate().then(() => {
 }).catch((error) => {
     console.error('cannot to connect to the database:', error)
 })
-console.log('somthing..')
+// console.log('somthing..')
 
 module.exports = {
     db
