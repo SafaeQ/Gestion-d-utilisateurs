@@ -2,7 +2,8 @@ const Sequelize = require('sequelize');
 
 const db = new Sequelize('usermangementsystem', 'root', '', {
     host: 'localhost',
-    dialect: 'mysql'
+    dialect: 'mysql',
+
 })
 
 db.authenticate().then(() => {
