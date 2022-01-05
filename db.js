@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
-const db = new Sequelize('usermangementsystem', 'root', '', {
+
+const sequelize = new Sequelize('usermangementsystem', 'root', '', {
     host: 'localhost',
     dialect: 'mysql'
 })
@@ -9,5 +10,3 @@ sequelize.authenticate().then(() => {
 }).catch((error) => {
     console.error('cannot to connect to the database:', error)
 })
-
-module.exports = db;
