@@ -2,7 +2,7 @@
   "name": "gestion-d-utilisateurs",
   "version": "1.0.0",
   "description": "Technologies:  Node JS Express SQL ORM, Sequelize, Templates, Engins(ejs,hbs,...)",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "node db.js",
     "dev": "nodemon app.js"
