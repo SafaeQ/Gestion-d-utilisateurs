@@ -2,17 +2,29 @@ const {
     Sequelize,
     DataTypes
 } = require('sequelize');
+const db = require('../../db')
 
-function Sqlz(sequelize, DataTypes) {
-    const User = sequelize.define('User', {
-        text: {
-            type: DataTypes.String,
-            allowNull: false
-        }
-    })
-    return User
-}
+const User = db.define('User', {
+    id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        allowNull: false,
+        primaryKey: true,
+    },
+    Account_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    }
+})
 
 module.exports = {
-    Sqlz
+    User
 }
