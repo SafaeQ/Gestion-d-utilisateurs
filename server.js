@@ -16,7 +16,7 @@ const port = 9000
 //     getAllUsers(res, req).then(users => res.send(users))
 // })
 db.sequelize.sync().then((req) => {
-    app.listen(2000, () => {
+    app.listen(() => {
         console.log(`listening on port ${port}`);
     })
 })

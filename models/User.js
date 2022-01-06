@@ -1,6 +1,6 @@
 // 'use strict';
 module.exports = (sequelize, DataTypes) => {
-    const Utilisateur = sequelize.define('User', {
+    const User = sequelize.define('User', {
         account_name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     //         foreignKey: 'idDepartement'
     //     });
     // };
-    return Utilisateur;
+    return User;
 };
 
 
