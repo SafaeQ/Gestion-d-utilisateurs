@@ -28,7 +28,10 @@ const User = sequelize.define('User', {
         type: DataTypes.INTEGER
     }
 })
-
+// , {
+//     timestamps: true,
+//     paranoid: true
+// }  
 // User.belongsTo(models.properties, {
 //     foreignKey: 'id_dep',
 //     onDelete: 'CASCADE'
