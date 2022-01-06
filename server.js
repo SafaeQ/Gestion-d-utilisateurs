@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
+const {
+    db
+} = require('./db')
 
+app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs')
 
 const port = 9000

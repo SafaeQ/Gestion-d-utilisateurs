@@ -15,12 +15,12 @@ db.authenticate().then(() => {
 
 
 // console.log('somthing..')
-async function test() {
-    const users = await db.query("SELECT * FROM `users`", {
-        type: QueryTypes.SELECT
-    });
-    console.log(users);
-}
+// async function test() {
+//     const users = await db.query("SELECT * FROM `users`", {
+//         type: QueryTypes.SELECT
+//     });
+//     console.log(users);
+// }
 // test()
 
 module.exports = {
