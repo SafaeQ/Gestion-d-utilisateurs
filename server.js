@@ -1,17 +1,9 @@
 const express = require('express');
-const exphbs = require('express-handlebars')
 const app = express();
-const router = require('./routes/routes');
-app.use(express.json());
-app.use(express.urlencoded({
-    extended: true
-}));
-app.use(express.static(path.join(__dirname)))
-app.engine('hbs', exphbs({
-    extname: ".hbs"
-}));
-app.set('view engine', 'hbs')
-app.use('/', router);
+
+
+app.set('view engine', 'ejs')
+
 const port = 9000
 
 app.get('/', (req, res) => {
