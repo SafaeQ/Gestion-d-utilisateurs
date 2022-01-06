@@ -5,8 +5,14 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        email: DataTypes.STRING,
-        password: DataTypes.STRING,
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
     });
     // Utilisateur.associate = function (models) {
     //     Utilisateur.belongsTo(models.Departement, {
