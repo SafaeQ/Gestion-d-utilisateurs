@@ -14,12 +14,12 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
     });
-    // Utilisateur.associate = function (models) {
-    //     Utilisateur.belongsTo(models.Departement, {
-    //         as: 'departement',
-    //         foreignKey: 'idDepartement'
-    //     });
-    // };
+    User.associate = function (models) {
+        User.belongsTo(models.Departement, {
+            as: 'departement',
+            foreignKey: 'idDepartement'
+        });
+    };
     return User;
 };
 
