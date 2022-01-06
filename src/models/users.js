@@ -27,9 +27,6 @@ const User = sequelize.define('User', {
         allowNull: false,
         type: DataTypes.INTEGER
     }
-}, {
-    timestamps: true,
-    paranoid: true
 })
 
 // User.belongsTo(models.properties, {

@@ -1,8 +1,8 @@
-const User = require('../models/Users')
+const models = require('../models/Users')
 
 
 function getAllUsers(req, res, next) {
-    return User
+    return models.User
         .findAll({
             paranoid: false
         })
