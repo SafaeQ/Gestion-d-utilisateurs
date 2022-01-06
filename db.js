@@ -1,13 +1,15 @@
-const Sequelize = require('sequelize');
 const {
+    Sequelize,
     QueryTypes
 } = require('sequelize');
-const db = new Sequelize('usermangementsystem', 'root', '', {
+const db = {}
+
+const sequelize = new Sequelize('usermangementsystem', 'root', '', {
     host: 'localhost',
     dialect: 'mysql'
 })
 
-db.authenticate().then(() => {
+sequelize.authenticate().then(() => {
     console.log('My Connection has been established successfully.');
 }).catch((error) => {
     console.error('cannot to connect to the database:', error)
@@ -23,6 +25,4 @@ db.authenticate().then(() => {
 // }
 // test()
 
-module.exports = {
-    db
-}
+module.exports = sequelize

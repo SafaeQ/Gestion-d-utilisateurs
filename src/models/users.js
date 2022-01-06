@@ -2,9 +2,9 @@ const {
     Sequelize,
     DataTypes
 } = require('sequelize');
-const db = require('../../db')
+const sequelize = require('../../db')
 
-const User = db.define('User', {
+const User = sequelize.define('User', {
     id_user: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -32,10 +32,10 @@ const User = db.define('User', {
     paranoid: true
 })
 
-User.belongsTo(models.properties, {
-    foreignKey: 'id_dep',
-    onDelete: 'CASCADE'
-})
+// User.belongsTo(models.properties, {
+//     foreignKey: 'id_dep',
+//     onDelete: 'CASCADE'
+// })
 
 module.exports = {
     User
