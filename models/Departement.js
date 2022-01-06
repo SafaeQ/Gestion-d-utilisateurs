@@ -11,3 +11,4 @@ module.exports = (sequelize, DataTypes) => {
     })
     return Departement
 }
+// module.exports = Departement

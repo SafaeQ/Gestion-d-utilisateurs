@@ -1,4 +1,3 @@
-// 'use strict';
 module.exports = (sequelize, DataTypes) => {
     const User = sequelize.define('User', {
         account_name: {
@@ -22,23 +21,3 @@ module.exports = (sequelize, DataTypes) => {
     };
     return User;
 };
-
-
-// const models = require('../models/Users')
-
-
-// controllers
-// function getAllUsers(req, res, next) {
-//     return models.User
-//         .findAll({
-//             paranoid: false
-//         })
-//         .then(users => res.status(200).json({
-//             status: 'okkk',
-//             users
-//         }))
-//         .catch(err => console.log(err));
-// }
-// module.exports = {
-//     getAllUsers,
-// }
