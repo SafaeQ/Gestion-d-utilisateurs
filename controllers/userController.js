@@ -37,17 +37,35 @@ const createUser = async (req, res) => {
 }
 
 const updateUser = async (req, res) => {
+    const {
+        id
+    } = req.params;
+    const data = req.body;
+    const selector = {
+        where: {
+            id: id
+        }
+    }
+    await User.update(data, selector).catch(err => console.log(err))
+    res.send('done')
+}
 
-    const user = await User.update({
-        account_name,
-        email,
-        password,
+const deleteUser = async (req, res) => {
+    const {
+        id
+    } = req.params;
+    const user = await User.destroy({
+        where: {
+            id: id
+        }
     }).catch(err => console.log(err))
     res.send(user)
+
 }
 module.exports = {
     getAllUsers,
     oneUser,
     createUser,
-    updateUser
+    updateUser,
+    deleteUser
 }
