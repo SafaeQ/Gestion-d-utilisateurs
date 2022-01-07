@@ -9,6 +9,7 @@ con.authenticate().then(() => {
 }).catch((error) => {
     console.error('cannot to connect to the database:', error)
 })
+module.exports = con
 
 
 // console.log('somthing..')
@@ -19,5 +20,3 @@ con.authenticate().then(() => {
 //     console.log(users);
 // }
 // test()
-
-module.exports = con
