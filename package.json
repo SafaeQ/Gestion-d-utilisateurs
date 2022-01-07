@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/SafaeQ/Gestion-d-utilisateurs#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
     "fs": "^0.0.1-security",
     "mysql2": "^2.3.3",
     "path": "^0.12.7",

@@ -1,22 +1,45 @@
-const express = require('express');
-const app = express();
-const db = require('./models')
+// const app = express();
+// const con = require('./db')
+// const db = require('./models')
 // const {
 //     getAllUsers
-// } = require('./src/controllers/user')
+// } = require('./controllers/users')
 
 // app.engine('html', require('ejs').renderFile);
 // app.set('view engine', 'ejs')
 
-const port = 9000
+// const port = 6000
 // app.get('/', (req, res) => {
 //     res.send('hello world');
 // })
 // app.get('/all', (req, res) => {
 //     getAllUsers(res, req).then(users => res.send(users))
 // })
-db.sequelize.sync().then((req) => {
-    app.listen(() => {
-        console.log(`listening on port ${port}`);
-    })
+
+// app.listen(() => {
+//     console.log(`listening on port http://localhost:${port}`);
+// })
+
+const express = require('express');
+const {
+    engine
+} = require('express-handlebars')
+const app = express();
+const port = process.env.PORT || 5000;
+const router = require('./routes/routes');
+app.use(express.json());
+app.use(express.urlencoded({
+    extended: true
+}));
+app.use(express.static('public'));
+app.engine('hbs', engine({
+    extname: ".hbs"
+}));
+app.set('view engine', 'hbs');
+app.use('/', router);
+app.get('/', (req, res) => {
+    res.render("home");
+})
+app.listen(port, () => {
+    console.log(`The server is listening on port ${port}`)
 })
