@@ -23,20 +23,31 @@ const createUser = async (req, res) => {
         account_name,
         email,
         password,
-        id_ped
+        // id_ped
     } = await req.body;
     const user = await User.create({
         account_name,
         email,
         password,
-        id_ped
+        // id_ped
     }).catch(err => console.log(err))
     console.log(user)
     res.send(user)
     // await res.redirect('/')
 }
+
+const updateUser = async (req, res) => {
+
+    const user = await User.update({
+        account_name,
+        email,
+        password,
+    }).catch(err => console.log(err))
+    res.send(user)
+}
 module.exports = {
     getAllUsers,
     oneUser,
     createUser,
+    updateUser
 }
