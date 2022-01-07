@@ -1,14 +1,12 @@
-module.exports = (sequelize, DataTypes) => {
-    const Departement = sequelize.define('Departement', {
-        name_departement: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        description: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        }
-    })
-    return Departement
-}
-// module.exports = Departement
+const Sequelize = require('sequelize');
+const db = require('../db')
+module.exports = db.define('Departement', {
+    name_departement: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    description: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    }
+})
