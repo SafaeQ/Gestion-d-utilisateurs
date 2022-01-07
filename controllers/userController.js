@@ -11,6 +11,14 @@ const getAllUsers = async (req, res) => {
     // });
     res.send(users)
 }
+const oneUser = async (req, res) => {
+    const user = await User.findOne({
+        raw: true,
+    }).catch(err => console.log(err))
+    res.send(user)
+}
 module.exports = {
     getAllUsers,
+    oneUser,
+    // createUser,
 }
