@@ -2,7 +2,6 @@
 // const {
 //     getAllUsers
 // } = require('./controllers/users')
-
 const express = require('express');
 const app = express();
 const port = 5000;
