@@ -7,7 +7,7 @@ module.exports = {
      *
      * Example:*/
     await queryInterface.createTable('users', {
-      id_user: {
+      id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         primaryKey: true,
@@ -30,8 +30,8 @@ module.exports = {
         type: Sequelize.INTEGER,
         forgingKey: true
       },
-      createAt: Sequelize.DATE,
-      updateAt: Sequelize.DATE
+      createdAt: Sequelize.DATE,
+      updatedAt: Sequelize.DATE
     });
 
   },

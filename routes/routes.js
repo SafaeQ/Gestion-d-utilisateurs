@@ -6,7 +6,5 @@ const {
 router.get('/', (req, res) => {
     res.render('home');
 })
-router.get('/all', (req, res) => {
-    res.render(getAllUsers());
-})
+router.get('/all', getAllUsers)
 module.exports = router;

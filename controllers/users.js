@@ -1,15 +1,15 @@
-const models = require('../models/User')
+const {
+    User
+} = require('../models')
 
-function getAllUsers(req, res, next) {
-    return models.User
-        .findAll({
-            paranoid: false
-        })
-        .then(users => res.status(200).json({
-            status: 'okkk',
-            users
-        }))
-        .catch(err => console.log(err));
+const getAllUsers = async (req, res) => {
+    const users = await User.findAll({
+        raw: true,
+    }).catch(err => console.log(err))
+    // await res.render('home', {
+    //     users
+    // });
+    res.send(users)
 }
 module.exports = {
     getAllUsers,

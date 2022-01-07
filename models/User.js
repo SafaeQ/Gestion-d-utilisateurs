@@ -1,4 +1,3 @@
-const Sequelize = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
     const User = sequelize.define('User', {
         account_name: {
@@ -14,11 +13,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
     });
-    User.associate = function (models) {
-        User.belongsTo(models.Departement, {
-            as: 'departement',
-            foreignKey: 'idDepartement'
-        });
-    };
+    // User.associate = function (models) {
+    //     User.belongsTo(models.Departement, {
+    //         as: 'departement',
+    //         foreignKey: 'idDepartement'
+    //     });
+    // };
     return User;
 };
