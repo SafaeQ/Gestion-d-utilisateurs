@@ -8,10 +8,10 @@ const {
     deleteUser
 } = require('../controllers/userController')
 
-// router.get('/', (req, res) => {
-//     res.render('home');
-// })
-router.get('/', getAllUsers)
+router.get('/', (req, res) => {
+    res.render('home');
+})
+router.get('/users', getAllUsers)
 router.get('/users/:id', oneUser)
 router.post('/create', createUser)
 router.put('/update/:id', updateUser)
