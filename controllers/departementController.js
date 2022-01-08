@@ -9,6 +9,7 @@ const getAllDepartement = async (req, res) => {
     res.send(departements)
 }
 
+
 module.exports = {
     getAllDepartement,
 
