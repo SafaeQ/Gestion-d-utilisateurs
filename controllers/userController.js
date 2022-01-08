@@ -58,6 +58,9 @@ const deleteUser = async (req, res) => {
         where: {
             id: id
         }
+    }).then(function () {
+        console.log('destroy all data')
+        // console.log(user);
     }).catch(err => console.log(err))
     res.send(user)
 
