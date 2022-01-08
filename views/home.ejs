@@ -27,11 +27,11 @@
     <tbody>
         <% users.forEach((user)=> { %>
         <tr>
-            <th scope="row"><%= this.id %></th>
-            <td><%= this.account_name %></td>
-            <td><%= this.email %></td>
-            <td><%= this.password %></td>
-            <td><%= this.id_departement %></td>
+            <th scope="row"><%= user.id %></th>
+            <td><%= user.account_name %></td>
+            <td><%= user.email %></td>
+            <td><%= user.password %></td>
+            <td><%= user.id_departement %></td>
             <td>
                 <a class="btn btn-danger" href="#">delete</a>
                 <a class="btn btn-success" href="#">edit</a>
@@ -39,7 +39,6 @@
         </tr>
         <% }) %>
 
-        {{ /each }}
         <tr>
             <th scope="row">1</th>
             <td>Mark</td>
