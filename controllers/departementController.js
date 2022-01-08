@@ -1,6 +1,6 @@
 const {
     Departement
-} = require('../models/DepartementModel')
+} = require('../models')
 
 const getAllDepartement = async (req, res) => {
     const departements = await Departement.findAll({
