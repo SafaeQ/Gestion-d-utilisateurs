@@ -25,17 +25,19 @@
         </tr>
     </thead>
     <tbody>
+        {{#each users}}
         <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>otto</td>
-            <td>@mdo</td>
-            <td>otto</td>
+            <th scope="row">{{ this.id }}</th>
+            <td>{{ this.account_name }}</td>
+            <td>{{ this.email }}</td>
+            <td>{{ this.password }}</td>
+            <td>{{ this.id_departement }}</td>
             <td>
-                <a class="btn btn-danger" href="#">delete</a>
-                <a class="btn btn-success" href="#">edit</a>
+                <a class="btn btn-danger" href="/user/{{ this.id }}">delete</a>
+                <a class="btn btn-success" href="/edit/{{ this.id }}">edit</a>
             </td>
         </tr>
+        {{ /each }}
         <tr>
             <th scope="row">1</th>
             <td>Mark</td>
