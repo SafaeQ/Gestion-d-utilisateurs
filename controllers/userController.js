@@ -8,8 +8,8 @@ const getAllUsers = async (req, res) => {
     }).catch(err => console.log(err))
     // await res.render('home', users);
     res.send(users)
-
 }
+
 const oneUser = async (req, res) => {
     const user = await User.findOne({
         raw: true,
