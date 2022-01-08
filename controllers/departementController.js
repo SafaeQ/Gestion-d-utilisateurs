@@ -10,5 +10,6 @@ const getAllDepartement = async (req, res) => {
 }
 
 module.exports = {
-    getAllDepartement
+    getAllDepartement,
+
 }
