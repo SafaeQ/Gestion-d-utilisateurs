@@ -66,23 +66,10 @@ const deleteUser = async (req, res) => {
 }
 
 const deleteAllUsers = async (req, res) => {
-    const {
-        id
-    } = req.params;
-    const user = await User.deleteAll({
-        where: {
-            id: id
-        }
-    }).then(function (deleteRecord) {
-        if (deleteRecord) {
-            res.status(200).json({
-                message: 'success'
-            })
-        } else {
-            res.status(404).json({
-                message: "record not found"
-            })
-        }
+    const user = await User.destroy({
+        raw: true
+    }).then(function () {
+        res.send('delete all')
     }).catch(err => console.log(err))
     res.send(user)
 }
