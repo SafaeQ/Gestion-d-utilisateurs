@@ -63,12 +63,34 @@ const deleteUser = async (req, res) => {
         // console.log(user);
     }).catch(err => console.log(err))
     res.send(user)
+}
 
+const deleteAllUsers = async (req, res) => {
+    const {
+        id
+    } = req.params;
+    const user = await User.deleteAll({
+        where: {
+            id: id
+        }
+    }).then(function (deleteRecord) {
+        if (deleteRecord) {
+            res.status(200).json({
+                message: 'success'
+            })
+        } else {
+            res.status(404).json({
+                message: "record not found"
+            })
+        }
+    }).catch(err => console.log(err))
+    res.send(user)
 }
 module.exports = {
     getAllUsers,
     oneUser,
     createUser,
     updateUser,
-    deleteUser
+    deleteUser,
+    deleteAllUsers
 }
