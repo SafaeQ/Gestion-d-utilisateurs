@@ -27,7 +27,7 @@ router.delete('/usersdel', deleteAllUsers)
 
 // routes of departements
 router.get('/departements', getAllDepartement)
-router.get('/departements', getAllDepartement)
-router.put('/departements', getAllDepartement)
+router.get('/departements/:id', getDepartement)
+router.put('/departements/:id', updateDepartement)
 
 module.exports = router;
