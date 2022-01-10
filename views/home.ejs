@@ -41,12 +41,12 @@
                         <th>Name</th>
                         <th>Email</th>
                         <th>Address</th>
-                        <th>Phone</th>
+                        <th>Password</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <% departements.forEach((ele)=> { %>
+                    <% users.forEach((ele)=> { %>
                     <tr>
                         <td>
                             <span class="custom-checkbox">
@@ -56,9 +56,9 @@
                         </td>
 
                         <td><%= ele.id %></td>
-                        <td><%= ele.name_departement %></td>
-                        <td><%= ele.description %></td>
-                        <td>(171) 555-2222</td>
+                        <td><%= ele.account_name %></td>
+                        <td><%= ele.email %></td>
+                        <td><%= ele.password %></td>
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
                                     data-toggle="tooltip" title="Edit">&#xE254;</i></a>
@@ -71,7 +71,7 @@
             </table>
         </div>
     </div>
-    <!-- Edit Modal HTML -->
+    <!-- Add Modal HTML -->
     <div id="addEmployeeModal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">

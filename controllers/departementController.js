@@ -6,9 +6,9 @@ const getAllDepartement = async (req, res) => {
     const departements = await Departement.findAll({
         raw: true
     }).catch(err => err.message)
-    res.render('test', {
-        departements: departements
-    })
+    // res.render('test', {
+    //     departements: departements
+    // })
     // res.send(departements)
 }
 
@@ -16,9 +16,9 @@ const getDepartement = async (req, res) => {
     const departement = await Departement.findOne({
         raw: true
     }).catch(err => err.message)
-    res.render('home', {
-        departements: [departement]
-    })
+    // res.render('home', {
+    //     departements: [departement]
+    // })
 }
 
 const createDepartement = async (req, res) => {

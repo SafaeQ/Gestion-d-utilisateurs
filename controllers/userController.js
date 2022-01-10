@@ -6,7 +6,9 @@ const getAllUsers = async (req, res) => {
     const users = await User.findAll({
         raw: true,
     }).catch(err => console.log(err))
-    // await res.render('home', users);
+    await res.render('home', {
+        users: users
+    });
     res.send(users)
 }
 
