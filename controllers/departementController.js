@@ -20,23 +20,24 @@ const updateDepartement = async (req, res) => {
     const {
         id
     } = req.params;
-    const departement = await Departement.update(id)
-        // .then(x => {
-        //     if (x == 1) {
-        //         res.send({
-        //             message: 'Departement updated'
-        //         })
-        //     } else {
-        //         res.send({
-        //             message: 'cannot updated'
-        //         })
-        //     }
-        // })
-        .catch(err => {
-            res.status(500).send({
-                message: err.message
-            })
+    const data = req.body;
+    const departement = await Departement.update(data, {
+            where: {
+                id: id
+            },
         })
+        .then(x => {
+            if (x == 1) {
+                res.send({
+                    message: 'Departement updated'
+                })
+            } else {
+                res.send({
+                    message: 'cannot updated'
+                })
+            }
+        })
+        .catch(err => console.log(err))
     res.send(departement)
 }
 
