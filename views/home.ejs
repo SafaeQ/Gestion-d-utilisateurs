@@ -1,3 +1,40 @@
+<h1>All Users</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Account_Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">password</th>
+            <th scope="col">id_departement</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% departements.forEach((ele)=> { %>
+        <tr>
+            <th scope="row"><%= ele.id %></th>
+            <td><%= ele.name_departement %></td>
+            <td><%= ele.description %></td>
+            <td>
+                <a class="btn btn-danger" href="#">delete</a>
+                <a class="btn btn-success" href="#">edit</a>
+            </td>
+        </tr>
+        <% }) %>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>otto</td>
+            <td>@mdo</td>
+            <td>otto</td>
+            <td>
+                <a class="btn btn-danger" href="#">delete</a>
+                <a class="btn btn-success" href="#">edit</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 <% departements.forEach(function(dep){ %>
 <h1><%= dep.description %></h1>
 <% }); %>

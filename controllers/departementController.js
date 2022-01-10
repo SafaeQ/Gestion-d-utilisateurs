@@ -14,7 +14,7 @@ const getDepartement = async (req, res) => {
         raw: true
     }).catch(err => err.message)
     res.render('home', {
-        departements: [departement, departement, departement, departement]
+        departements: [departement]
     })
 }
 
