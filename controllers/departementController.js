@@ -13,7 +13,20 @@ const getDepartement = async (req, res) => {
     const departement = await Departement.findOne({
         raw: true
     }).catch(err => err.message)
-    res.send(departement)
+    res.render('home', {
+        departements: [departement, departement, departement, departement]
+    })
+}
+
+const createDepartement = async (req, res) => {
+    const {
+        title,
+        description
+    } = await req.body
+    const departement = await Departement.create({
+        title,
+        description
+    })
 }
 
 const updateDepartement = async (req, res) => {
@@ -46,5 +59,6 @@ module.exports = {
     getAllDepartement,
     getDepartement,
     updateDepartement,
+    createDepartement,
 
 }
