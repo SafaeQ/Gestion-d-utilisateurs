@@ -67,7 +67,8 @@ const deleteUser = async (req, res) => {
 
 const deleteAllUsers = async (req, res) => {
     const user = await User.destroy({
-        raw: true
+        where: {},
+        truncate: false
     }).then(function () {
         res.send('delete all')
     }).catch(err => console.log(err))
