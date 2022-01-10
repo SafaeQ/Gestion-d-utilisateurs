@@ -6,7 +6,10 @@ const getAllDepartement = async (req, res) => {
     const departements = await Departement.findAll({
         raw: true
     }).catch(err => err.message)
-    res.send(departements)
+    res.render('test', {
+        departements: departements
+    })
+    // res.send(departements)
 }
 
 const getDepartement = async (req, res) => {
