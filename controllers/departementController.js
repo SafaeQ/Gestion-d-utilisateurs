@@ -31,7 +31,7 @@ const createDepartement = async (req, res) => {
     // }
     // creation of the depatement
     const departement = {
-        name_departemen: req.body.name_departemen,
+        name_departemen: req.body.name_departement,
         description: req.body.description
     }
     Departement.create(departement)
