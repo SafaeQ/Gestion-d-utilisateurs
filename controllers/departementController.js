@@ -61,7 +61,14 @@ const updateDepartement = async (req, res) => {
 function deleteDepartement(req, res) {
     const {
         id
-    } = req.params.id;
+    } = req.params;
+    const departement = await Departement.destroy({
+        where: {
+            id: id
+        }
+    }).then(() => {
+        res.send('destroy the data')
+    }).catch(err => console.log(err))
 
 }
 
