@@ -58,7 +58,7 @@ const updateDepartement = async (req, res) => {
     res.send(departement)
 }
 
-function deleteDepartement(req, res) {
+const deleteDepartement = async (req, res) => {
     const {
         id
     } = req.params;
