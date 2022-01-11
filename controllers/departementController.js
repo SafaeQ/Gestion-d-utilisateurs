@@ -29,6 +29,7 @@ const createDepartement = async (req, res) => {
     //     })
     //     return
     // }
+
     // creation of the depatement
     const departement = {
         name_departemen: req.body.name_departement,
