@@ -35,12 +35,14 @@ const createDepartement = async (req, res) => {
         name_departemen: req.body,
         description: req.body
     }
-    Departement.create(departement)
-        .then((data) => {
-            res.send({
-                message: data
-            })
+    Departement.create({
+            departement
         })
+        // .then((data) => {
+        //     res.send({
+        //         message: data
+        //     })
+        // })
         .catch(err => {
             res.status(505).send({
                 message: err.message || 'Something went wrong'
