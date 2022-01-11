@@ -6,9 +6,11 @@ const getAllUsers = async (req, res) => {
     const users = await User.findAll({
         raw: true,
     }).catch(err => console.log(err))
+
     await res.render('home', {
         users: users
     });
+
     res.send(users)
 }
 
@@ -16,6 +18,7 @@ const oneUser = async (req, res) => {
     const user = await User.findOne({
         raw: true,
     }).catch(err => console.log(err))
+
     res.send(user)
 }
 
@@ -44,7 +47,6 @@ const createUser = async (req, res) => {
 
     // console.log(user)
     res.send(user)
-    // await res.redirect('/')
 }
 
 const updateUser = async (req, res) => {
@@ -79,6 +81,7 @@ const deleteUser = async (req, res) => {
         res.send('destroy the data')
         // console.log(user);
     }).catch(err => console.log(err))
+
     res.send(user)
 }
 
@@ -89,6 +92,7 @@ const deleteAllUsers = async (req, res) => {
     }).then(function () {
         res.send('delete all')
     }).catch(err => console.log(err))
+
     res.send(user)
 }
 module.exports = {
