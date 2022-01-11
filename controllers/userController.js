@@ -53,6 +53,11 @@ const updateUser = async (req, res) => {
         }
     }
     await User.update(data, selector).catch(err => console.log(err))
+
+    // await res.render('index', {
+    //     user: user
+    // })
+
     res.send('done')
 }
 
