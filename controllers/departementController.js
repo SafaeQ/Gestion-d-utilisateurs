@@ -44,10 +44,10 @@ const createDepartement = async (req, res) => {
                 message: err.message || 'Something went wrong'
             })
         })
-    await res.render('home', {
-        departement: name_departemen,
-
-    })
+    // await res.render('home', {
+    //     departement: name_departemen,
+    //     departement: description
+    // })
     res.send(departement)
 }
 
