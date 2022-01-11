@@ -24,7 +24,7 @@ const getDepartement = async (req, res) => {
 const createDepartement = async (req, res) => {
     // validate request
 
-    if (!req.body.name_departemen || !req.body.description) {
+    if (!req.body.name_departement || !req.body.description === null) {
         res.status(400).send({
             message: 'Empty request'
         })
