@@ -74,6 +74,9 @@ const updateDepartement = async (req, res) => {
             }
         })
         .catch(err => console.log(err))
+    await res.render('home', {
+        departement: departement
+    })
     res.send(departement)
 }
 
