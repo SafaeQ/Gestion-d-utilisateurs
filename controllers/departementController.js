@@ -45,7 +45,7 @@ const createDepartement = async (req, res) => {
                 message: err.message || 'Something went wrong'
             })
         })
-    res.send(de)
+    res.send(departement)
 }
 
 const updateDepartement = async (req, res) => {
