@@ -37,6 +37,11 @@ const createUser = async (req, res) => {
         user: email,
         user: password
     })
+
+    // res.render('addModal', {
+    //     user: user
+    // })
+
     // console.log(user)
     res.send(user)
     // await res.redirect('/')
