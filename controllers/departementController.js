@@ -23,12 +23,12 @@ const getDepartement = async (req, res) => {
 
 const createDepartement = async (req, res) => {
     // validate request
-    if (!req.body.name_departemen || req.body.description) {
-        res.status(400).send({
-            message: 'Empty request'
-        })
-        // return
-    }
+    // if (!req.body.name_departemen || req.body.description) {
+    //     res.status(400).send({
+    //         message: 'Empty request'
+    //     })
+    //     return
+    // }
     // creation of the depatement
     const departement = {
         name_departemen: req.body.name_departemen,
