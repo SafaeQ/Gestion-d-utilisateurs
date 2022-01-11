@@ -89,7 +89,6 @@ const deleteDepartement = async (req, res) => {
         res.send('destroy the data')
     }).catch(err => console.log(err))
     res.send(departement)
-
 }
 
 module.exports = {
