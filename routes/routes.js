@@ -30,6 +30,6 @@ router.delete('/usersdel', deleteAllUsers)
 router.get('/departements', getAllDepartement)
 router.get('/departements/:id', getDepartement)
 router.put('/departement/:id', updateDepartement)
-router.put('/departement', createDepartement)
+router.post('/departement', createDepartement)
 
 module.exports = router;
