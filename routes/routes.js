@@ -32,5 +32,6 @@ router.get('/departements', getAllDepartement)
 router.get('/departements/:id', getDepartement)
 router.put('/departement/:id', updateDepartement)
 router.post('/departement', createDepartement)
+router.delete('/departement/:id', createDepartement)
 
 module.exports = router;
