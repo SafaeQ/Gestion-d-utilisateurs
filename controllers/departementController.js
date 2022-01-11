@@ -38,11 +38,12 @@ const createDepartement = async (req, res) => {
     Departement.create({
             departement
         })
-        // .then((data) => {
-        //     res.send({
-        //         message: data
-        //     })
-        // })
+        .then((data) => {
+            res.send({
+                message: data
+            })
+            console.log(data, 'dsdkdskd')
+        })
         .catch(err => {
             res.status(505).send({
                 message: err.message || 'Something went wrong'
