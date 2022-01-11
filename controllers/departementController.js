@@ -22,6 +22,13 @@ const getDepartement = async (req, res) => {
 }
 
 const createDepartement = async (req, res) => {
+    // validate request
+    if (!req.body.title || req.body.description) {
+        res.status(400).send({
+            message: 'Empty request'
+        })
+        return
+    }
     const {
         title,
         description
@@ -29,7 +36,7 @@ const createDepartement = async (req, res) => {
     const departement = await Departement.create({
         title,
         description
-    })
+    }).catch(err => console.log(err))
 
 }
 
