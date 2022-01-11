@@ -30,6 +30,7 @@ const createDepartement = async (req, res) => {
         title,
         description
     })
+
 }
 
 const updateDepartement = async (req, res) => {
@@ -57,11 +58,17 @@ const updateDepartement = async (req, res) => {
     res.send(departement)
 }
 
+function deleteDepartement(req, res) {
+    const {
+        id
+    } = req.params.id;
+
+}
 
 module.exports = {
     getAllDepartement,
     getDepartement,
     updateDepartement,
     createDepartement,
-
+    deleteDepartement
 }
