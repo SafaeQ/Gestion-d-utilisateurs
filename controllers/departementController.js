@@ -36,7 +36,8 @@ const createDepartement = async (req, res) => {
         description
     } = await req.body
     const departement = await Departement.create({
-            departement
+            name_departemen,
+            description
         })
         .then((data) => {
             res.send({
