@@ -29,14 +29,22 @@ const createDepartement = async (req, res) => {
         })
         return
     }
-    const {
-        title,
-        description
-    } = await req.body
-    const departement = await Departement.create({
-        title,
-        description
-    }).catch(err => console.log(err))
+    // creation of the depatement
+    const depart = {
+        title: req.body.title,
+        description: req.body.description
+    }
+    Departement.create(depart)
+        .then((data) => {
+            res.send({
+                message: data
+            })
+        })
+        .catch(err => {
+            res.status(505).send({
+                message: err.message || 'Something went wrong'
+            })
+        })
 
 }
 
