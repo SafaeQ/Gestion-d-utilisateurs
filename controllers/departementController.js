@@ -9,7 +9,7 @@ const getAllDepartement = async (req, res) => {
     // res.render('test', {
     //     departements: departements
     // })
-    // res.send(departements)
+    res.send(departements)
 }
 
 const getDepartement = async (req, res) => {
@@ -30,11 +30,11 @@ const createDepartement = async (req, res) => {
         return
     }
     // creation of the depatement
-    const depart = {
+    const departement = {
         title: req.body.title,
         description: req.body.description
     }
-    Departement.create(depart)
+    Departement.create(departement)
         .then((data) => {
             res.send({
                 message: data
@@ -45,7 +45,7 @@ const createDepartement = async (req, res) => {
                 message: err.message || 'Something went wrong'
             })
         })
-
+    res.send(de)
 }
 
 const updateDepartement = async (req, res) => {
