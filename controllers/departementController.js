@@ -42,7 +42,7 @@ const createDepartement = async (req, res) => {
             res.send({
                 message: data
             })
-            console.log(data, 'dsdkdskd')
+            // console.log(data, 'dsdkdskd')
         })
         .catch(err => {
             res.status(505).send({
