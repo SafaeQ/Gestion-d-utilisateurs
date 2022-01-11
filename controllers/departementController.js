@@ -31,11 +31,11 @@ const createDepartement = async (req, res) => {
     // }
 
     // creation of the depatement
-    const departement = {
-        name_departemen: req.body,
-        description: req.body
-    }
-    Departement.create({
+    const {
+        name_departemen,
+        description
+    } = await req.body
+    const departement = await Departement.create({
             departement
         })
         .then((data) => {
