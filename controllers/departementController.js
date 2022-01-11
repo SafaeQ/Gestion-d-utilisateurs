@@ -39,12 +39,6 @@ const createDepartement = async (req, res) => {
             name_departemen,
             description
         })
-        .then((data) => {
-            res.send({
-                message: data
-            })
-            // console.log(data, 'dsdkdskd')
-        })
         .catch(err => {
             res.status(505).send({
                 message: err.message || 'Something went wrong'
