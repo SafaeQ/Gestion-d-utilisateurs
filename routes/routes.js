@@ -13,6 +13,7 @@ const {
     getAllDepartement,
     getDepartement,
     updateDepartement,
+    createDepartement,
 } = require('../controllers/departementController')
 router.get('/', (req, res) => {
     res.render('home');
@@ -29,5 +30,6 @@ router.delete('/usersdel', deleteAllUsers)
 router.get('/departements', getAllDepartement)
 router.get('/departements/:id', getDepartement)
 router.put('/departement/:id', updateDepartement)
+router.put('/departement', createDepartement)
 
 module.exports = router;
