@@ -26,7 +26,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      id_ped: {
+      id_departement: {
         type: Sequelize.INTEGER,
         forgingKey: true
       },

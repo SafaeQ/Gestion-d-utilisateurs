@@ -13,11 +13,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
     });
-    // User.associate = function (models) {
-    //     User.belongsTo(models.Departement, {
-    //         as: 'departement',
-    //         foreignKey: 'idDepartement'
-    //     });
-    // };
+    User.associate = function (models) {
+        User.belongsTo(models.Departement, {
+            as: 'departement',
+            foreignKey: 'id_departement'
+        });
+    };
     return User;
 };
