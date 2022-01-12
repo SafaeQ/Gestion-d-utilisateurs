@@ -9,5 +9,10 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         }
     })
+
+    Departement.hasMany(User, {
+        as: 'Users'
+    })
+
     return Departement;
 }
