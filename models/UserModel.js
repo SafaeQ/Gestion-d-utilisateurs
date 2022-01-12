@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         },
     });
     User.belongsTo(Departement, {
-        as: 'departement',
+        as: 'Departements',
         foreignKey: 'id_departement'
     });
     return User;
