@@ -12,10 +12,14 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
+    }, {
+        // additional options, like classMethods in which you could create the association
+        classMethods: {
+            associate: function (models) {
+                this.belongsTo(models.Departement);
+            }
+        }
     });
-    User.belongsTo(Departement, {
-        as: 'Departements',
-        foreignKey: 'id_departement'
-    });
+    // User.belongsTo(Departement);
     return User;
 };
