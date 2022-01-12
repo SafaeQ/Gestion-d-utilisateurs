@@ -35,7 +35,7 @@ const createUser = async (req, res) => {
         password,
         // id_ped
     }).catch(err => console.log(err))
-    await res.render('addModal', {
+    await res.render('home', {
         user: account_name,
         user: email,
         user: password
