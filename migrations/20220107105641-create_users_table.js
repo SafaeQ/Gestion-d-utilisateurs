@@ -2,10 +2,15 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    /**
-     * Add altering commands here.
-     *
-     * Example:*/
+    // await queryInterface.addConstaint('users', {
+    //   fields: ['id_departement'],
+    //   type: 'foreign key',
+    //   name: 'users',
+    //   references: {
+    //     table: 'departement',
+    //     fields: 'id'
+    //   }
+    // })
     await queryInterface.createTable('users', {
       id: {
         type: Sequelize.INTEGER,
@@ -37,10 +42,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    /**
-     * Add reverting commands here.
-     *
-     * Example:*/
     await queryInterface.dropTable('users');
 
   }
