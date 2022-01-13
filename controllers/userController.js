@@ -28,13 +28,13 @@ const createUser = async (req, res) => {
         account_name,
         email,
         password,
-        // id_ped
+        id_departement
     } = await req.body;
     const user = await User.create({
         account_name,
         email,
         password,
-        // id_ped
+        id_departement
     }).catch(err => console.log(err))
     await res.render('home', {
         user: account_name,
