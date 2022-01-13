@@ -11,8 +11,8 @@ const getAllUsers = async (req, res) => {
         raw: true,
     }).catch(err => console.log(err))
 
-    res.render('home', {
-        users: users
+    res.render('home.ejs', {
+        users: 'user'
     });
 
     res.send(users)
