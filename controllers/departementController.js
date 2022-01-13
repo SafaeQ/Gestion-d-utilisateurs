@@ -66,11 +66,11 @@ const updateDepartement = async (req, res) => {
         .then(x => {
             if (x == 1) {
                 res.send({
-                    message: 'Departement updated'
+                    message: `Departement updated `
                 })
             } else {
                 res.send({
-                    message: 'cannot updated'
+                    message: `cannot updated ${id}`
                 })
             }
         })
