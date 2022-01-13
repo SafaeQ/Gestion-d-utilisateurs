@@ -16,6 +16,7 @@ const {
     createDepartement,
     deleteDepartement
 } = require('../controllers/departementController')
+
 router.get('/', (req, res) => {
     res.render('home');
 })
