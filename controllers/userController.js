@@ -12,7 +12,7 @@ const getAllUsers = async (req, res) => {
     }).catch(err => console.log(err))
 
     res.render('home.ejs', {
-        users: 'user'
+        users: users
     });
 
     res.send(users)
