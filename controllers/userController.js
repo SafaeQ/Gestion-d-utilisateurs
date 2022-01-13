@@ -8,14 +8,15 @@ const {
 const getAllUsers = async (req, res) => {
     const users = await User.findAll({
 
-        raw: true,
-    }).catch(err => console.log(err))
+            raw: true,
+        })
 
-    res.render('home.ejs', {
-        users: users
-    });
+        .then(users => res.render('home.ejs', {
+            users: users.rows
+        }))
+        .catch(err => console.log(err))
 
-    res.send(users)
+    // res.send(users)
 }
 
 const oneUser = async (req, res) => {
