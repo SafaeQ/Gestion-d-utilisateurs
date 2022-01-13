@@ -66,11 +66,11 @@ const updateDepartement = async (req, res) => {
         .then(x => {
             if (x == 1) {
                 res.send({
-                    message: `Departement updated ${id}`
+                    message: `Departement updated id: ${id}`
                 })
             } else {
                 res.send({
-                    message: `cannot updated ${id}`
+                    message: `cannot updated id: ${id}`
                 })
             }
         })
@@ -92,7 +92,7 @@ const deleteDepartement = async (req, res) => {
             id: id
         }
     }).then(() => {
-        res.send(`destroy the data ${id}`)
+        res.send(`destroy the data id: ${id}`)
     }).catch(err => console.log(err))
 
     res.send(departement)

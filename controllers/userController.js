@@ -79,7 +79,7 @@ const deleteUser = async (req, res) => {
         }
     }).then(function () {
         // console.log('destroy all data')
-        res.send(`destroy the data ${id}`)
+        res.send(`destroy the data id: ${id}`)
         // console.log(user);
     }).catch(err => console.log(err))
 
