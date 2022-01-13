@@ -1,9 +1,9 @@
 const {
-    Departement
+    Departements
 } = require('../models')
 
 const getAllDepartement = async (req, res) => {
-    const departements = await Departement.findAll({
+    const departements = await Departements.findAll({
         raw: true
     }).catch(err => err.message)
     // res.render('test', {
@@ -13,7 +13,7 @@ const getAllDepartement = async (req, res) => {
 }
 
 const getDepartement = async (req, res) => {
-    const departement = await Departement.findOne({
+    const departement = await Departements.findOne({
         raw: true
     }).catch(err => err.message)
     // res.render('home', {
@@ -36,15 +36,15 @@ const createDepartement = async (req, res) => {
         name_departement,
         description
     } = await req.body
-    const departement = await Departement.create({
-            name_departement,
-            description
-        })
-        .catch(err => {
-            res.status(505).send({
-                message: err.message || 'Something went wrong'
-            })
-        })
+    const departement = await Departements.create({
+        name_departement,
+        description
+    }).catch(err => console.error(err))
+    // .catch(err => {
+    //     res.status(505).send({
+    //         message: err.message || 'Something went wrong'
+    //     })
+    // })
     // await res.render('home', {
     //     departement: name_departemen,
     //     departement: description
@@ -57,7 +57,7 @@ const updateDepartement = async (req, res) => {
         id
     } = req.params;
     const data = req.body;
-    const departement = await Departement.update(data, {
+    const departement = await Departements.update(data, {
             where: {
                 id: id
             },

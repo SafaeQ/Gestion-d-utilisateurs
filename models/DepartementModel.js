@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Departement = sequelize.define('Departements', {
+    const Departements = sequelize.define('Departements', {
         name_departement: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -19,5 +19,5 @@ module.exports = (sequelize, DataTypes) => {
 
     // Departement.hasMany(User)
 
-    return Departement;
+    return Departements;
 }
