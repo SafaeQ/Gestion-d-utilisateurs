@@ -19,6 +19,7 @@ const getDepartement = async (req, res) => {
     // res.render('home', {
     //     departements: [departement]
     // })
+    res.send(departement)
 }
 
 const createDepartement = async (req, res) => {
