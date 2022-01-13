@@ -86,7 +86,7 @@ const deleteDepartement = async (req, res) => {
     const {
         id
     } = req.params;
-    const departement = await Departement.destroy({
+    const departement = await Departements.destroy({
         where: {
             id: id
         }
