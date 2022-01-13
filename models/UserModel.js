@@ -12,6 +12,11 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
+        id_departement: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            foreignKey: true
+        }
     }, {
         // additional options, like classMethods in which you could create the association
         classMethods: {
