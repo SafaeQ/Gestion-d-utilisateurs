@@ -21,7 +21,9 @@ module.exports = (sequelize, DataTypes) => {
         // additional options, like classMethods in which you could create the association
         classMethods: {
             associate: function (models) {
-                this.belongsTo(models.Departement);
+                this.belongsTo(models.Departement, {
+                    onDelete: 'cascade'
+                });
             }
         }
     });

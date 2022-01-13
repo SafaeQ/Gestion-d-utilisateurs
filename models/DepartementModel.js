@@ -12,7 +12,9 @@ module.exports = (sequelize, DataTypes) => {
         // additional options, like classMethods in which you could create the association
         classMethods: {
             associate: function (models) {
-                this.hasMany(models.User);
+                this.hasMany(models.User, {
+                    foreignKey: 'id_departement'
+                });
             }
         }
     })

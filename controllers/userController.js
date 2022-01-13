@@ -1,6 +1,9 @@
 const {
-    User
+    User,
+    Departements
 } = require('../models')
+
+
 
 const getAllUsers = async (req, res) => {
     const users = await User.findAll({

@@ -33,7 +33,12 @@ module.exports = {
       },
       id_departement: {
         type: Sequelize.INTEGER,
-        forgingKey: true
+        forgingKey: true,
+        // references: {
+        //   model: 'departements',
+        //   key: 'id_departement'
+        // },
+        onDelete: 'CASCADE',
       },
       createdAt: Sequelize.DATE,
       updatedAt: Sequelize.DATE
