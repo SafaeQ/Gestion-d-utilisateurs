@@ -11,7 +11,7 @@ const getAllUsers = async (req, res) => {
         raw: true,
     }).catch(err => console.log(err))
 
-    await res.render('home', {
+    res.render('home', {
         users: users
     });
 
@@ -22,7 +22,9 @@ const oneUser = async (req, res) => {
     const user = await User.findOne({
         raw: true,
     }).catch(err => console.log(err))
-
+    // res.render('home', {
+    //     user: user
+    // });
     res.send(user)
 }
 
@@ -32,14 +34,14 @@ const createUser = async (req, res) => {
         email,
         password,
         id_departement
-    } = await req.body;
+    } = req.body;
     const user = await User.create({
         account_name,
         email,
         password,
         id_departement
     }).catch(err => console.log(err))
-    // await res.render('home', {
+    // res.render('addModal', {
     //     user: account_name,
     //     user: email,
     //     user: password
@@ -65,7 +67,7 @@ const updateUser = async (req, res) => {
     }
     await User.update(data, selector).catch(err => console.log(err))
 
-    // await res.render('index', {
+    //  res.render('index', {
     //     user: user
     // })
 

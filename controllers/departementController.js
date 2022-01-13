@@ -46,7 +46,7 @@ const createDepartement = async (req, res) => {
     //         message: err.message || 'Something went wrong'
     //     })
     // })
-    // await res.render('home', {
+    // res.render('home', {
     //     departement: name_departemen,
     //     departement: description
     // })
@@ -76,7 +76,7 @@ const updateDepartement = async (req, res) => {
         })
         .catch(err => console.log(err))
 
-    // await res.render('home', {
+    // res.render('home', {
     //     departement: departement
     // })
 
