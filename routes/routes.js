@@ -23,7 +23,7 @@ const {
 // routes of users
 router.get('/', getAllUsers)
 router.get('/users/:id', oneUser)
-router.post('/create', createUser)
+router.post('/', createUser)
 router.put('/update/:id', updateUser)
 router.delete('/users/:id', deleteUser)
 router.delete('/usersdel', deleteAllUsers)
