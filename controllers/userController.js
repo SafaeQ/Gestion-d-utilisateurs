@@ -10,11 +10,11 @@ const getAllUsers = async (req, res) => {
 
             raw: true,
         })
-
-        .then(users => res.render('home.ejs', {
-            users: users.rows
-        }))
         .catch(err => console.log(err))
+
+    res.render('home.ejs', {
+        users: users
+    })
 
     // res.send(users)
 }
