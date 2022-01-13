@@ -17,11 +17,11 @@ const {
     deleteDepartement
 } = require('../controllers/departementController')
 
-router.get('/', (req, res) => {
-    res.render('home');
-})
+// router.get('/', (req, res) => {
+//     res.render('home');
+// })
 // routes of users
-router.get('/users', getAllUsers)
+router.get('/', getAllUsers)
 router.get('/users/:id', oneUser)
 router.post('/create', createUser)
 router.put('/update/:id', updateUser)
