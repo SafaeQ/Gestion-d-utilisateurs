@@ -42,15 +42,15 @@ const createUser = async (req, res) => {
         password,
         id_departement
     }).catch(err => console.log(err))
-    res.render('addModal.ejs', {
-        user: account_name,
-        user: email,
-        user: password
-    })
-
-    // res.render('addModal', {
-    //     user: user
+    // res.render('addModal.ejs', {
+    //     user: account_name,
+    //     user: email,
+    //     user: password
     // })
+
+    res.render('addModal.ejs', {
+        user: user
+    })
 
     // console.log(user)
     // res.send(user)
