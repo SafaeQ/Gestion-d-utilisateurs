@@ -60,10 +60,6 @@ const updateUser = async (req, res) => {
         }
     }
     await User.update(data, selector).catch(err => console.log(err))
-
-    //  res.render('', {
-    //     user: user
-    // })
     res.redirect('/');
     // res.send('done')
 }
