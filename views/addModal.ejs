@@ -1,25 +1,27 @@
 <div id="addEmployeeModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form class="form" action="/create">
+            <form class="form" method="POST" action="/">
                 <div class="modal-header">
                     <h4 class="modal-title">Add User</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
-                <% if(user){ %>
                 <div class="modal-body">
                     <label>Name</label>
-                    <input type="text" class="form-control" required <%= user.account_name %>>
+                    <input type="text" name="account_name" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" class="form-control" required <%= user.email %>>
+                    <input type="email" name="email" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label>Password</label>
-                    <input type="text" class="form-control" required <%= user.password %>>
+                    <input type="password" name="password" class="form-control" required>
                 </div>
-                <% } %>
+                <div class="form-group">
+                    <label>departement id</label>
+                    <input type="number" name="id_departement" class="form-control" required>
+                </div>
         </div>
         <div class="modal-footer">
             <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">

@@ -64,8 +64,8 @@ const updateUser = async (req, res) => {
     //  res.render('', {
     //     user: user
     // })
-    res
-    res.send('done')
+    res.redirect('/');
+    // res.send('done')
 }
 
 const deleteUser = async (req, res) => {
