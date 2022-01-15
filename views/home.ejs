@@ -36,9 +36,9 @@
                         <td><%= ele.password %></td>
                         <td><%= ele.id_departement %></td>
                         <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
+                            <a href="#" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip"
+                                    title="Edit">&#xE254;</i></a>
+                            <a href="/users/:id " class="delete" data-toggle="modal"><i class="material-icons"
                                     data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                         </td>
                     </tr>
@@ -55,7 +55,7 @@
     <% user = {} %>
     <%- include('./editModal.ejs') %>
     <!-- Delete Modal HTML -->
-    <%# include('./layouts/deleteModal.ejs')  -%>
+    <%- include('./deleteModal.ejs')  -%>
 
 </body>
 
