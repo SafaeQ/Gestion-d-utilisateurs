@@ -11,6 +11,8 @@ https://ejs.co/
 
 https://expressjs.com/
 
+https://www.youtube.com/watch?v=yJ6q3sh3zOs
+
 https://sequelize.org/v4/manual/tutorial/associations.html#belongsto
 
 # commands :
