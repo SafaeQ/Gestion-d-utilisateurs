@@ -61,7 +61,9 @@ const updateUser = async (req, res) => {
     }
     await User.update(data, selector).catch(err => console.log(err))
     res.render('/', {
-        selector: selector
+        id: rows[0].id,
+        account_name: rows[0].account_name,
+        email: rows[0].email
     })
     // res.redirect('/');
     // res.send('done')
