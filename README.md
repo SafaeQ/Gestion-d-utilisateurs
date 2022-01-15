@@ -12,3 +12,15 @@ https://ejs.co/
 https://expressjs.com/
 
 https://sequelize.org/v4/manual/tutorial/associations.html#belongsto
+
+# commands :
+
+npm install --save
+npm install express 
+npm install express-ejs-layouts 
+npm install mysql2
+
+npm i nodemon
+npm i sequelize 
+
+sequelize init 
