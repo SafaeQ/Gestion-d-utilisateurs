@@ -40,10 +40,8 @@
     let input3 = document.querySelector('#input3')
     let input4 = document.querySelector('#input4')
     let x = document.querySelectorAll('.edit');
-    // let td = document.getElementsByTagName('td') //[0];
     x.forEach(edit => edit.addEventListener('click', () => {
         console.log('cliked');
-
         // console.log(edit.parentElement.parentElement.children[1])
         let id = edit.parentElement.parentElement.children[0]
         let name = edit.parentElement.parentElement.children[1]
@@ -57,6 +55,6 @@
         input4.value = id_departement.textContent
 
     }))
-    // document.body.parentElement
+    document.body.parentElement
     // function Edit() {}
 </script>
