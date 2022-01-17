@@ -2,15 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    // await queryInterface.addConstaint('users', {
-    //   fields: ['id_departement'],
-    //   type: 'foreign key',
-    //   name: 'users',
-    //   references: {
-    //     table: 'departement',
-    //     fields: 'id'
-    //   }
-    // })
+
     await queryInterface.createTable('users', {
       id: {
         type: Sequelize.INTEGER,

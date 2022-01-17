@@ -1,6 +1,6 @@
 const {
     User,
-    Departements
+    // Departements
 } = require('../models')
 
 
