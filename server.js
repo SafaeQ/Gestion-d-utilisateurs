@@ -5,11 +5,13 @@ const expressLayouts = require('express-ejs-layouts');
 const port = 5000;
 const router = require('./routes/routes');
 
+// methods that send data in post request works as middleware
 app.use(express.json());
 app.use(express.urlencoded({
     extended: true
 }));
-// static files
+
+// static files => to serve this files
 app.use(express.static('assets'));
 app.use('/css', express.static(__dirname + 'assets/css'))
 
