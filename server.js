@@ -17,10 +17,8 @@ app.use('/css', express.static(__dirname + 'assets/css'))
 // set template engine
 app.use(expressLayouts)
 app.set('layout', './layouts/layout.ejs')
-// declare that we're using ejs
-app.set('view engine', 'ejs');
-// spicify with directory
-app.set('views', 'views');
+app.set('view engine', 'ejs'); // declare that we're using ejs
+app.set('views', 'views'); // spicify with directory
 
 app.use('/', router);
 
