@@ -1,4 +1,5 @@
 const express = require('express');
+// make instance of express
 const app = express();
 // to help us create view
 const expressLayouts = require('express-ejs-layouts');
