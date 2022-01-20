@@ -7,6 +7,7 @@ const {
 const getAllUsers = async (req, res) => {
     const users = await User.findAll({
 
+            // return the raw result
             raw: true,
         })
         .catch(err => console.log(err))
