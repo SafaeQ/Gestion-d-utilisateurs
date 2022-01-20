@@ -1,8 +1,6 @@
 const express = require('express');
-// make instance of express
-const app = express();
-// to help us create view
-const expressLayouts = require('express-ejs-layouts');
+const app = express(); // make instance of express
+const expressLayouts = require('express-ejs-layouts'); // to help us create view
 const port = 5000;
 const router = require('./routes/routes');
 
