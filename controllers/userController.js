@@ -27,7 +27,7 @@ const oneUser = async (req, res) => {
 }
 
 const createUser = async (req, res) => {
-    const {
+    const { // get user 
         account_name,
         email,
         password,
