@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+// to help us create view
 const expressLayouts = require('express-ejs-layouts');
 const port = 5000;
 const router = require('./routes/routes');
