@@ -6,14 +6,10 @@ const {
 // async function that have a promise
 const getAllUsers = async (req, res) => {
     const users = await User.findAll({
-
-            // return the raw result
-            raw: true,
+            raw: true, // return the raw result
         })
         .catch(err => console.log(err))
-
-    // it's rendered the view to the client
-    res.render('home.ejs', {
+    res.render('home.ejs', { // it's rendered the view to the client
         users: users
     })
 
