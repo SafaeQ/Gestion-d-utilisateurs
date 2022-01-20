@@ -39,9 +39,6 @@ const createUser = async (req, res) => {
         password,
         id_departement
     }).catch(err => console.log(err))
-    res.redirect("/")
-
-
     // console.log(user)
     // res.send(user)
 }
