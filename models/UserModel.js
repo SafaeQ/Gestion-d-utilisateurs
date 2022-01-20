@@ -1,4 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
+    // define the name of model and its properties
     const User = sequelize.define('User', {
         account_name: {
             type: DataTypes.STRING,
