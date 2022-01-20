@@ -9,6 +9,7 @@ const {
     deleteAllUsers
 } = require('../controllers/userController')
 
+// import functions of departement from controller (CRUD)
 const {
     getAllDepartement,
     getDepartement,
