@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+
+// import functions of users from controller (CRUD)
 const {
     getAllUsers,
     oneUser,
