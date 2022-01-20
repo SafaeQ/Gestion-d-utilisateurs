@@ -12,6 +12,7 @@ const getAllUsers = async (req, res) => {
         })
         .catch(err => console.log(err))
 
+    // it's rendered the view to the client
     res.render('home.ejs', {
         users: users
     })
