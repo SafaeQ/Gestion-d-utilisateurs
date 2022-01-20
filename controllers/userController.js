@@ -3,7 +3,7 @@ const {
 } = require('../models')
 
 
-
+// async function that have a promise
 const getAllUsers = async (req, res) => {
     const users = await User.findAll({
 
